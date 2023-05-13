@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/header-style.css">
+  <link rel="stylesheet" href="CSS/board-style.css">
+  <title>Wordle</title>
+</head>
+
+<body>
+  <header>
+    <div class="nav-container" style="opacity: 0;">
+      <div class="nav-boxes" style="cursor: default;">
+        <h4>
+          How To Play
+        </h4>
+      </div>
+      <div class="nav-boxes" style="cursor: default;">
+        <h4>
+          Reset
+        </h4>
+      </div>
+    </div>
+
+    <h1 id="title">
+      Wordle
+    </h1>
+    <div class="nav-container">
+      <div class="nav-boxes">
+        <h4 onclick="showPopup()">
+          How To Play
+        </h4>
+
+        <div class="popup">
+          <div class="popup-content-container">
+            <span class="close" onclick="hidePopup()">&times;</span>
+            <div class="popup-content">
+              <h1 style="margin-right: auto;">
+                How To Play
+              </h1>
+
+              <div class="popup-list-items">
+
+                <ul>
+                  <li>
+                    Guess The Word in 6 Tries
+                  </li>
+                  <li>
+                    Each Guess Must Be a Valid 5 - Letter Word.
+                  </li>
+                  <li>
+                    The Color Of The Tiles Will Change To Show How Close Your Guess Was To The Word.
+                  </li>
+
+                  <ol style="margin-left: 1rem;">
+                    <li style="color: rgb(53, 128, 0);">Green = Correct Letter & Position</li>
+                    <li style="color: rgb(255, 217, 0);">Yellow = Correct Letter</li>
+                    <li style="color: gray;">Gray = Pass/No Hits</li>
+                  </ol>
+                  <img class="example-pic" src="Images/nils-huenerfuerst-E-IQ1nbpzZo-unsplash.jpg" alt="example">
+                  <!-- <img class="example-pic" src="example.png" alt="example"> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-boxes">
+        <h4>
+          <a href="index.html">Reset</a>
+        </h4>
+      </div>
+      <!-- <div class="nav-boxes" onclick="showSettingsPopup()">
+        <h4>
+          Settings
+          <label class="switch-label" id="light-change"></label> 
+        </h4>
+      </div> -->
+    </div>
+  </header>
+  <hr>
+  <div id="answer-container">
+    <h3 id="answer"></h3>
+  </div>
+
+  <section class="board-section">
+    <div id="board">
+    </div>
+  </section>
+
+  <script src="JS/script.js"></script>
+</body>
+
+</html>
